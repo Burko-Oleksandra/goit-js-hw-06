@@ -27,12 +27,14 @@ const images = [
 const imageArray = [];
 
 for (let image of images) {
-  const imageEl = `<li><img src=${image.url} alt=${image.alt}/></li>`;
+  const imageEl = `<li><img src='${image.url}' alt='${image.alt}'/></li>`;
   imageArray.push(imageEl);
 }
 console.log(imageArray);
 
-const itemEl = document.querySelector('.gallery').insertAdjacentHTML('beforeend', imageArray);
+const itemEl = document
+  .querySelector('.gallery')
+  .insertAdjacentHTML('beforeend', imageArray.join(''));
 // const itemEl = document.createElement('li');
 
 // console.log(itemEl);
